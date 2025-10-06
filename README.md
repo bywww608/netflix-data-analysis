@@ -1,70 +1,75 @@
-# Data Analysis Project Template / 数据分析项目模板
+ Netflix Data Analysis
 
-This repository is a **ready-to-use template** for data analysis projects.  
-It includes a recommended folder structure, example scripts for cleaning and visualization, a minimal Jupyter notebook, and instructions to run everything on Windows + VS Code.
+This project explores the Netflix Movies and TV Shows dataset to uncover trends in content type, release years, top production countries, and movie duration distributions.  
+It demonstrates essential data analysis and visualization skills using Python — a great showcase for aspiring Data Analysts.
 
-这个仓库是一个**数据分析项目模板**，包含推荐的文件结构、示例清洗/可视化脚本、一个最小的 Jupyter Notebook，以及在 Windows + VS Code 上运行的说明。
 
----
+ Project Overview
+This notebook performs exploratory data analysis (EDA) on Netflix data to answer questions like:
+- How many Movies vs. TV Shows are on Netflix?
+- Which countries produce the most titles?
+- How has Netflix content grown over the years?
+- What is the distribution of movie durations?
 
-## Repository structure / 仓库结构
-```
-data-analysis-project-template/
+
+ Tools & Libraries
+- Python 3
+- Pandas – for data cleaning and manipulation  
+- Matplotlib & Seaborn – for data visualization  
+- Jupyter Notebook – for interactive data exploration  
+
+
+Folder Structure
+netflix-data-analysis/
+│
 ├── data/
-│   ├── raw/        # Put raw/original data here (do NOT commit sensitive/private data)
-│   └── cleaned/    # Cleaned data outputs (gitignored by default)
-├── notebooks/
-│   └── example_analysis.ipynb
-├── scripts/
-│   ├── data_cleaning.py
-│   └── visualization.py
-├── charts/         # generated charts (gitignored)
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+│ └── raw/
+│ └── netflix_titles.csv
+│
+├── charts/
+│ ├── netflix_movies_vs_tvshows.png
+│ ├── netflix_release_years.png
+│ ├── netflix_top_countries.png
+│ └── netflix_movie_durations.png
+│
+└── notebooks/
+└── netflix_analysis.ipynb
 
----
 
-## Quick start (Windows + VS Code)
-1. Clone or download this repo.  
-2. Open the folder in VS Code (`File -> Open Folder`).  
-3. Open a terminal in VS Code (`View -> Terminal`) and run:
-```powershell
-python -m venv venv
-# If using PowerShell:
-.env\Scripts\Activate
-# If activation fails, run (temporary scope):
-# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-pip install -r requirements.txt
-jupyter lab   # or: jupyter notebook
-```
-4. Place your raw CSV files into `data/raw/`.  
-5. Use the included cleaning script:
-```powershell
-python scripts/data_cleaning.py --input data/raw/your_file.csv --output data/cleaned/your_file_cleaned.csv
-```
-6. Open `notebooks/example_analysis.ipynb` and follow the cells to do EDA and plotting.
+How to Run the Project
 
----
+1. Clone the repository
+   ```bash
+   git clone https://github.com/YiwenBai/netflix-data-analysis.git
+   cd netflix-data-analysis
+Install required libraries
 
-## How to push to GitHub
-```bash
-git init
-git add .
-git commit -m "Initial: data analysis project template"
-git branch -M main
-# create repo on GitHub website, then:
-git remote add origin https://github.com/YOURUSERNAME/data-analysis-project-template.git
-git push -u origin main
-```
-> If `git push` asks for credentials: use your GitHub username and a Personal Access Token (PAT) as password, or sign in via VS Code's GitHub integration.
+2.pip install pandas matplotlib seaborn jupyter
+Run Jupyter Notebook
 
----
+3.jupyter notebook
+Open notebooks/netflix_analysis.ipynb and run all cells.
 
-## Notes / 注意事项
-- Keep **raw** data out of public repos if it contains private or sensitive information.  
-- This template is designed for quick starts: replace `example_analysis.ipynb` with your own notebooks for each project.
+Key Insights
+1.Movies dominate Netflix’s catalog compared to TV shows.
+
+2.Content production surged after 2015, indicating rapid platform growth.
+
+3.The United States produces the majority of Netflix titles.
+
+4.Average movie duration centers around 90 minutes, with most between 60–120 minutes.
+
+Future Improvements
+Add genre-based analysis (e.g., most common genres by region).
+
+Analyze rating distributions and audience preferences.
+
+Build a simple dashboard for interactive data exploration.
+
+Author
+Yiwen Bai
+Based in Singapore | Curtin University (IT Major)
+Focus: Data Analysis, Visualization, and Insight Communication
 
 ---
 
