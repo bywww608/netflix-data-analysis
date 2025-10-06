@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+venv.bak/
+# Jupyter
+.ipynb_checkpoints
+# Data folders (do not commit raw data by default)
+data/raw/
+data/cleaned/
+charts/
+# VS Code
+.vscode/
+# OS
+.DS_Store
+Thumbs.db
